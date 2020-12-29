@@ -15,7 +15,7 @@ variable "vpc_cidr" {
 variable "vpc_azs" {
   description = "Availability zones for VPC"
   type        = list
-  default     = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  default     = ["us-east-2a", "us-east-2b", "us-east-2c"]
 }
 
 variable "vpc_private_subnets" {
@@ -33,7 +33,7 @@ variable "vpc_public_subnets" {
 variable "vpc_enable_nat_gateway" {
   description = "Enable NAT gateway for VPC"
   type    = bool
-  default = true
+  default = false
 }
 
 variable "vpc_tags" {
