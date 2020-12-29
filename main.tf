@@ -27,7 +27,7 @@ resource "aws_security_group" "allow_tls" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["${module.vpc.cidr_block}"]
+    cidr_blocks = ["${module.vpc.vpc_cidr}"]
   }
 
   egress {
