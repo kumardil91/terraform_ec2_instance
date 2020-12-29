@@ -48,7 +48,7 @@ resource "aws_instance" "app" {
   availability_zone = "us-east-2a"
   ami               = "ami-0a0ad6b70e61be944"
   key_name               = "user1"
-  vpc_security_group_ids = ["aws_security_group.allow_tls.id"]
+  vpc_security_group_ids = aws_security_group.allow_tls.id
   subnet_id              = module.vpc.public_subnets[0]
 
   tags = {
