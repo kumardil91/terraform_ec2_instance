@@ -20,7 +20,7 @@ module "vpc" {
 resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
-  vpc_id      = "${module.vpc.default_vpc_id}"
+  vpc_id      = module.vpc.default_vpc_id
 
   ingress {
     description = "TLS from VPC"
